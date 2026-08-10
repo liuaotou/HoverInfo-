@@ -1,0 +1,28 @@
+# ===== Node.js =====
+node_modules/
+npm-debug.log*
+package-lock.json
+.eslintcache
+
+# ===== Regolith 构建缓存 =====
+.regolith/
+
+# ===== 构建产物（main.js 由 esbuild 生成，README 有构建命令）=====
+packs/BP/scripts/main.js
+
+# ===== Minecraft 打包文件 =====
+*.mcaddon
+*.mcpack
+*.zip
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== 日志 / 临时 =====
+*.log
+tmp/
+/tmp/
