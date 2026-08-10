@@ -1,0 +1,24 @@
+{
+	"dependencies": {
+		"@bedrock-oss/add-on-registry": "^1.0.15",
+		"@bedrock-oss/bedrock-boost": "^2.0.1",
+		"@bedrock-oss/stylish": "^0.0.3",
+		"@minecraft/common": "^1.2.0",
+		"@minecraft/math": "^2.4.0",
+		"@minecraft/server": "^2.5.0",
+		"@minecraft/server-ui": "^2.0.0",
+		"@minecraft/vanilla-data": "^1.26.2"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@stylistic/eslint-plugin-js": "^4.4.1",
+		"@stylistic/eslint-plugin-ts": "^4.4.1",
+		"@typescript-eslint/eslint-plugin": "^8.57.0",
+		"@typescript-eslint/parser": "^8.57.0",
+		"esbuild": "^0.28.2",
+		"eslint": "^10.0.3",
+		"eslint-plugin-minecraft-linting": "^2.0.12",
+		"globals": "^17.4.0",
+		"typescript-eslint": "^8.57.0"
+	}
+}
