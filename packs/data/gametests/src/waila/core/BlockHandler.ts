@@ -253,18 +253,32 @@ export class BlockHandler {
 			const keys = Object.keys(states).sort();
 			if (keys.length === 0) return undefined;
 
-			return keys
-				.map((key) => {
-					const value = states[key as keyof typeof states];
-					const rawKey = key.replace("minecraft:", "");
-					const prefix = BlockHandler.colorForStateValue(value);
-					// R4.8: 状态名/值中文化
-					const nameZh = STATE_NAME_ZH[rawKey] ?? STATE_NAME_ZH[key] ?? rawKey;
-					const valueStr = String(value);
-					const valueZh = STATE_VALUE_ZH[valueStr] ?? valueStr;
-					return `§7${nameZh}: ${prefix}${valueZh}§r`;
-				})
-				.join("\n");
+			// R4.15: 同名状态去重（如熔炉的 facing_direction=2 与 cardinal_direction=north 都译为"朝向"）
+			// 可读值（字符串/布尔）优先于数字值，避免"朝向: 2 / 朝向: 北"重复显示
+			const seen = new Map<string, { line: string; isNumeric: boolean }>();
+			const lines: string[] = [];
+			for (const key of keys) {
+				const value = states[key as keyof typeof states];
+				const rawKey = key.replace("minecraft:", "");
+				const prefix = BlockHandler.colorForStateValue(value);
+				const nameZh = STATE_NAME_ZH[rawKey] ?? STATE_NAME_ZH[key] ?? rawKey;
+				const valueStr = String(value);
+				const valueZh = STATE_VALUE_ZH[valueStr] ?? valueStr;
+				const line = `§7${nameZh}: ${prefix}${valueZh}§r`;
+				const isNumeric = typeof value === "number";
+
+				const prev = seen.get(nameZh);
+				if (!prev) {
+					seen.set(nameZh, { line, isNumeric });
+					lines.push(line);
+				} else if (prev.isNumeric && !isNumeric) {
+					// 旧的是数字值，新的是可读值 → 用可读值替换
+					const idx = lines.indexOf(prev.line);
+					if (idx >= 0) lines[idx] = line;
+					seen.set(nameZh, { line, isNumeric });
+				}
+			}
+			return lines.join("\n");
 		} catch {
 			return undefined;
 		}

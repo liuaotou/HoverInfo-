@@ -44,6 +44,7 @@
 
 ---
 
+
 ## 📸 截图
 
 | | |
@@ -51,11 +52,11 @@
 | ![screenshot1](docs/screenshots/screenshot_1.jpg) | ![screenshot2](docs/screenshots/screenshot_2.jpg) |
 | ![screenshot3](docs/screenshots/screenshot_3.jpg) | |
 
----
-
 ## 📦 安装
 
-1. 下载 `高亮信息显示_R4.14.mcaddon`
+> ⚠️ 安装前请先删除手机上所有旧版本（R4.x），否则多个行为包共存会导致 UI 崩溃。
+
+1. 下载 `高亮信息显示_R5(V2).mcaddon`
 2. 双击导入 Minecraft（或通过文件管理器打开）
 3. 全局资源/行为包中启用
 4. 进入世界：**平时**看基础信息，**蹲下（潜行）**看详细信息

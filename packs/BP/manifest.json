@@ -1,31 +1,68 @@
 {
   "format_version": 2,
   "header": {
-    "name": "pack.name",
-    "description": "pack.description",
-    "uuid": "48402988-e5eb-4da5-a51c-928313d4d705",
+    "name": "高亮信息显示 R5(V2)",
+    "description": "高亮信息显示 - 修复丢物品BUG丨方块/生物信息丨全方块图标丨右侧可调节平面或3D",
+    "uuid": "500562c2-3331-4c7e-b07f-274fe686dcc6",
     "pack_scope": "world",
-    "version": [5, 1, 1],
-    "min_engine_version": [1, 21, 100]
+    "version": [
+      2,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
   },
   "modules": [
     {
-      "description": "Behavior Pack",
+      "description": "数据包",
       "type": "data",
-      "uuid": "eb4c5269-9996-4bbe-8ad3-5a69b946755d",
-      "version": [5, 1, 1]
+      "uuid": "172c83bc-ec69-416f-9d06-3dc4aa9c404d",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "description": "脚本模块",
+      "type": "script",
+      "uuid": "7b22f17a-2660-43f5-ba8e-a02c0dba802d",
+      "language": "javascript",
+      "version": [
+        2,
+        0,
+        0
+      ],
+      "entry": "scripts/main.js"
     }
   ],
   "dependencies": [
     {
-      "uuid": "7174f709-2140-4f50-989e-afcb55533b62",
-      "version": [5, 1, 1]
+      "uuid": "34ca10eb-bb9b-4dbc-b9a5-a3e473ae61bf",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.4.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
     }
   ],
   "metadata": {
     "product_type": "addon",
     "authors": [
-      "r4isen1920"
+      "r4isen1920",
+      "安全版重打包"
     ]
   }
 }
