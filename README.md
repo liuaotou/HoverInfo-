@@ -46,7 +46,10 @@
 
 ## 📸 截图
 
-> 截图待补充：对准方块/生物/掉落物的信息展示效果
+| | |
+|---|---|
+| ![screenshot1](docs/screenshots/screenshot_1.jpg) | ![screenshot2](docs/screenshots/screenshot_2.jpg) |
+| ![screenshot3](docs/screenshots/screenshot_3.jpg) | |
 
 ---
 
