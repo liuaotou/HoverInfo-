@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"allowSyntheticDefaultImports": true,
+		"target": "esnext",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": false,
+		"strict": true,
+		"noImplicitReturns": true,
+		"allowJs": false,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*", "**/__tests__/*"]
+}
